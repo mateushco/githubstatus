@@ -61,3 +61,12 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+// cheerio nodejs emulating imports
+import * as process from 'process';
+window['process'] = process;
+
+(window as any).global = window;
+var global = global || window;
+
+import * as bufferModule from "buffer"
+global.Buffer = global.Buffer || bufferModule.Buffer;
